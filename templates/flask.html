@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>User Dashboard</title></head>
+<body>
+  <h1>Hello, {{ user.name }}</h1>
+  <p>Admin? {{ 'Yes' if user.is_admin else 'No' }}</p>
+  <h2>Tasks:</h2>
+  <ul>
+    {% for task in user.tasks %}
+      <li>{{ task }}</li>
+    {% endfor %}
+  </ul>
+  <p><a href="/personnel">See Personnel</a></p>
+</body>
+</html>
+
+ 
